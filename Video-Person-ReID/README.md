@@ -26,7 +26,7 @@ python  main_video_person_reid.py --train-batch 16 --workers 0 --seq-len 4 --arc
 `
 <br />
 
-`arch` could be resnet50ta_surface_nu (Temporal Attention with keypoints feature, for AIC19 track 2) or resnet50ta (Temporal Attention, for AIC19 track 1). If using resnet50ta, do not use `--use-surface`.<br />
+`arch` could be `resnet50ta_surface_nu` (Temporal Attention with keypoints feature, for AIC19 track 2) or `resnet50ta` (Temporal Attention, for AIC19 track 1). If using `resnet50ta`, do not use `--use-surface`.<br />
 `metadatamodel` is correspond to the folder name `metadata_metadatamodel_query_deepreid` created in previous step.
 
 ### Testing
