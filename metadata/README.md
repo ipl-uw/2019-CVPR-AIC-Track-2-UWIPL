@@ -15,7 +15,7 @@ Download the pre-trained model [here](https://drive.google.com/file/d/1Ln-rK6k1v
 ## Training
 
 - label.txt is the categories.
-- data.txt is the training data path and labels. Noted that the example here is to used for training vehicle type and brand, weighted for the losses need to be revised in the code. The traning data should follow this format.
+- data.txt is the training data path and labels. Noted that the example here is to used for training vehicle type and brand, weighted for the losses need to be revised in the code (`multi_label_classifier.py` line 68-74). The traning data should follow this format.
 - for other training/testing/visualization options, please refer to option.py.
 
 Use the following command to run training code.
