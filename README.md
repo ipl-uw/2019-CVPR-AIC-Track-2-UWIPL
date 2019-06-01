@@ -8,7 +8,7 @@ Our code consists of the following three components:
 ### 1. Video-Person-ReID
 The vehicle reidentification code is based on Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
 
-### 2. metadata
+### 2. Metadata
 Metadata model for vehicle's type, brand and color. The code is based on \[[code](https://github.com/pangwong/pytorch-multi-label-classifier)\].
 
 ### 3. CarKeypoints
