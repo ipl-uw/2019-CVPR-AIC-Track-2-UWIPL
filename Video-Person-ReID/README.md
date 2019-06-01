@@ -53,6 +53,6 @@ The pre-trained model can be download at [here](https://github.com/ipl-uw).
 For generating features for our AIC track 1 's testing \[[code](https://github.com/ipl-uw/2019-CVPR-AIC-Track-1-UWIPL)\], run
 <br />
 `
-python  main_video_person_reidGraphModelInputGen.py
+python  Graph_ModelDataGen.py
 `
 <br />
