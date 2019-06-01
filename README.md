@@ -15,7 +15,7 @@ Metadata model for vehicle's type, brand and color. The code is based on \[[code
 The vehicle keypoints code is based on krrish94's CarKeypoints \[[code](https://github.com/krrish94/CarKeypoints)\].
 
 ## Training
-Training of both Video-Person-ReID and metadata requires CarKeypoints's inference result on training set. For CarKeypoints, we use the pre-trained model \[[model](https://github.com/krrish94/CarKeypoints)\]. Please refer to README.md file in each subfolder.
+Training of both Video-Person-ReID and metadata requires CarKeypoints's inference result on training set. For CarKeypoints, we use the pre-trained model \[[model](https://github.com/krrish94/CarKeypoints)\]. Please refer to the README.md files in each subfolder.
 
 ## Testing
 Testing of both Video-Person-ReID and metadata requires CarKeypoints's inference result on testing set. In addition, Video-Person-ReID needs metadata's inference result on testing set.
