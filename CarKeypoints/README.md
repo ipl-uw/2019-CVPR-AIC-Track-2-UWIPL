@@ -1,3 +1,5 @@
+The vehicle keypoints code is based on krrish94's CarKeypoints \[[code](https://github.com/krrish94/CarKeypoints)\].
+
 # CarKeypoints
 
 This repository contains inference code for using a modified [stacked-hourglass](https://github.com/krrish94/stacked-hourglass) to detect semantic keypoints on cars. 
