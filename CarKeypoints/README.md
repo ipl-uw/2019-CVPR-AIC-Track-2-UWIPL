@@ -31,3 +31,12 @@ inference.lua
 ```
 
 This will write a `results.txt` file (you can edit the name and path of this output file in `inference.lua`).
+
+## Running inference for AIC19
+
+To run inference on multiple images, put image paths in a text file (e.g. `fullpath_train.txt`). Then, run the inference script.
+```
+inference-imageset.lua
+```
+
+The result will be saved in `keypoint-train.txt`.
