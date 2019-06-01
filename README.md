@@ -7,11 +7,11 @@ Our code consists of the following three components:
 ### 1. Video-Person-ReID
 The vehicle reidentification code is based on Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
 
-### 2. CarKeypoints
-The vehicle keypoints code is based on krrish94's CarKeypoints \[[code](https://github.com/krrish94/CarKeypoints)\].
-
-### 3. metadata
+### 2. metadata
 Metadata model for vehicle's type, brand and color.
+
+### 3. CarKeypoints
+The vehicle keypoints code is based on krrish94's CarKeypoints \[[code](https://github.com/krrish94/CarKeypoints)\].
 
 ## Training
 
