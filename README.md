@@ -6,7 +6,7 @@ Our method ranks 2nd in the competition.
 Our code consists of the following three components:
 
 ### 1. Video-Person-ReID
-The vehicle reidentification code is based on Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
+The multi-view and metadata re-ranking vehicle reidentification model. The code is based on Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
 
 ### 2. Metadata
 Metadata model for vehicle's type, brand and color. The code is based on \[[code](https://github.com/pangwong/pytorch-multi-label-classifier)\].
