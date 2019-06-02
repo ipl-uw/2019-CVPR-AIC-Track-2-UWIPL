@@ -1,7 +1,7 @@
 # Video-Person-ReID for AIC19
 
 The code is for the video-based vehicle reidentification task in AIC19 track 1 and 2 \[[link](https://www.aicitychallenge.org/)\].
-The code is modified from Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
+The code is based on Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
 
 ### Requirement
 
@@ -64,6 +64,6 @@ Put and run `python crop_img.py` in the same folder in the downloaded dataset (i
 
 ### Reference
 
-The code is modified from Jiyang Gao's [Video-Person-ReID](https://github.com/jiyanggao/Video-Person-ReID).<br/>
+The code is based on Jiyang Gao's [Video-Person-ReID](https://github.com/jiyanggao/Video-Person-ReID).<br/>
 The visualization code is adopted from KaiyangZhou's [deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid).<br/>
 The re-ranking code is modified based on zhunzhong07's [person-re-ranking](https://github.com/zhunzhong07/person-re-ranking).
