@@ -4,7 +4,7 @@ The metadata classifier code is based on \[[code](https://github.com/pangwong/py
 
 This code assumes you have the following packages installed.
 - Python 3.6
-- Pytorch 0.3.1
+- Pytorch 0.4.0
 
 ## Our pre-trained model
 
