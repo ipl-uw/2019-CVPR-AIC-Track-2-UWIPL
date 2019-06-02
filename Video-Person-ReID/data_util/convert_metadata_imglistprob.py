@@ -3,13 +3,9 @@ from os.path import join, split, isfile, isdir
 
 
 conversions = [
-    ('./track2-gallery-query-metadata-0507/test-prob-100.log',
-     './track2-gallery-query-metadata-0507/prob_v2m100.txt',
-     './track2-gallery-query-metadata-0507/imglist_v2m100.txt'),
-
-    #('./track2-prob-pred-cm-0529/prob_Epoch15.log',
-    # './track2-prob-pred-cm-0529/prob_v2e15.txt',
-    # './track2-prob-pred-cm-0529/imglist_v2e15.txt'),
+    ('./track2-gallery-query-metadata-v2m100/test-prob-100.log',
+     './track2-gallery-query-metadata-v2m100/prob_v2m100.txt',
+     './track2-gallery-query-metadata-v2m100/imglist_v2m100.txt'),
 ]
 
 img_gline = {}

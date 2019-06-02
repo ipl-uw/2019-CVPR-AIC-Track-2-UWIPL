@@ -17,16 +17,17 @@ features = [
     'keypoint',
 ]
 
+aic_track2_dir = '/path_to_aic19-track2-reid/'
 
 for image_set in image_sets:
     for dummy in dummys:
-        image_path = '/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_%s_deepreid%s' % (image_set, dummy)
+        image_path = aic_track2_dir + 'image_%s_deepreid%s' % (image_set, dummy)
         for feature in features:
             print((image_set, dummy, feature))
-            feature_path = '/media/twhuang/NewVolume1/aic19/aic19-track2-reid/%s_%s_deepreid%s' % (feature, image_set, dummy)
+            feature_path = aic_track2_dir + '%s_%s_deepreid%s' % (feature, image_set, dummy)
             mkdir(feature_path)
 
-            feature_file = '/media/twhuang/NewVolume1/aic19/aic19-track2-reid/%s-%s.txt' % (feature, image_set)
+            feature_file = aic_track2_dir + '%s-%s.txt' % (feature, image_set)
             lines = []
             with open(feature_file, 'r') as f:
                 lines = f.readlines()

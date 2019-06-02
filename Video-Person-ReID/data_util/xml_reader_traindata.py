@@ -41,11 +41,13 @@ for neighbor in root.iter('Item'):
 
 carID_num={}
 
-source_path = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_train/"
-path_train = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_train_deepreid/"
-path_query = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_train_deepreid_query/"
-path_query_single = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_train_deepreid_query_single/"
-path_gallery = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_train_deepreid_gallery/"
+aic_track2_dir = '/path_to_aic19-track2-reid/'
+
+source_path = aic_track2_dir + "image_train/"
+path_train = aic_track2_dir + "image_train_deepreid/"
+path_query = aic_track2_dir + "image_train_deepreid_query/"
+path_query_single = aic_track2_dir + "image_train_deepreid_query_single/"
+path_gallery = aic_track2_dir + "image_train_deepreid_gallery/"
 os.mkdir(path_train)
 os.mkdir(path_query)
 os.mkdir(path_query_single)

@@ -20,14 +20,10 @@ def copy_rename(src_dir,old_file_name,dst_dir ,new_file_name):
 
 ###########################################################################
 
-import xml.etree.ElementTree as ET
-xmlp = ET.XMLParser(encoding="utf-8")
-tree = ET.parse('train_label.xml', parser=xmlp)
-root = tree.getroot()
+aic_track2_dir = '/path_to_aic19-track2-reid/'
 
-
-source_path_query = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_query/"
-path_query = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_query_deepreid/"
+source_path_query = aic_track2_dir + "image_query/"
+path_query = aic_track2_dir + "image_query_deepreid/"
 os.mkdir(path_query)
 
 q_img_camID={}
@@ -51,8 +47,8 @@ for i, img in enumerate(q_imgs):
         os.mkdir(path_query+"/"+carID+"/"+camID+"/")
     copy_rename(source_path_query,img,path_query+"/"+carID+"/"+camID+"/",'%s'%(img))
 
-source_path_test = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_test/"
-path_test = "/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_test_deepreid/"
+source_path_test = aic_track2_dir + "image_test/"
+path_test = aic_track2_dir +"image_test_deepreid/"
 os.mkdir(path_test)
 
 g_img_camID={}

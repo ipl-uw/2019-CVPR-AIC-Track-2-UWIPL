@@ -14,9 +14,9 @@ dummys = [
 
 models = [
     'v2m100',
-    #'v2e15',
 ]
 
+aic_track2_dir = '/path_to_aic19-track2-reid/'
 
 for model in models:
     for image_set in image_sets:
@@ -24,7 +24,7 @@ for model in models:
             print((model, image_set, dummy))
             # parse metadata probability from file
             metadatas = []
-            with open('/media/twhuang/NewVolume1/aic19/aic19-track2-reid/prob_%s_%s.txt'%(model, image_set), 'r') as f:
+            with open(aic_track2_dir + 'prob_%s_%s.txt'%(model, image_set), 'r') as f:
                 for i, line in enumerate(f):
                     line = line.strip()
                     if i % 4 == 0:
@@ -44,7 +44,7 @@ for model in models:
 
             # read image filenames from file
             img_orders = {}
-            with open('/media/twhuang/NewVolume1/aic19/aic19-track2-reid/imglist_%s_%s.txt'%(model, image_set), 'r') as f:
+            with open(aic_track2_dir + 'imglist_%s_%s.txt'%(model, image_set), 'r') as f:
                 for i, line in enumerate(f):
                     pos = line.find('.jpg')
                     imgid = line[pos-6:pos]
@@ -55,8 +55,8 @@ for model in models:
             print('images in image list: %d' % len(img_orders))
 
 
-            image_path = '/media/twhuang/NewVolume1/aic19/aic19-track2-reid/image_%s_deepreid%s' % (image_set, dummy)
-            metadata_path = '/media/twhuang/NewVolume1/aic19/aic19-track2-reid/metadata_%s_%s_deepreid%s' % (model, image_set, dummy)
+            image_path = aic_track2_dir + 'image_%s_deepreid%s' % (image_set, dummy)
+            metadata_path = aic_track2_dir + 'metadata_%s_%s_deepreid%s' % (model, image_set, dummy)
             mkdir(metadata_path)
 
             pids = [f for f in listdir(image_path) if isdir(join(image_path, f))]
