@@ -11,7 +11,7 @@ Python 2.7 <br />
 
 ### Dataset
 
-First download the AIC19 dataset \[[link](https://www.aicitychallenge.org/)\], and use the python scripts in `data_util/` to convert images, keypoints and metadata into desired file structure.
+First download the AIC19 dataset \[[link](https://www.aicitychallenge.org/)\], and use the python scripts in `data_util/` to convert images, keypoints and metadata into desired file structure. Please copy the scripts to your path to `aic19-track2-reid` for simplicity.
 
 1. Run `xml_reader_testdata.py` and `xml_reader_traindata.py` to convert images into desired file structure: `image_train_deepreid/carId/camId/imgId.jpg`.
 2. Run `create_feature_files.py` to convert the keypoints into desired file structure as images:  `keypoint_train_deepreid/carId/camId/imgId.txt`.
