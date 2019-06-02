@@ -31,6 +31,8 @@ q_img_carID={}
 
 q_imgs = [f for f in os.listdir(source_path_query)]
 q_imgs.sort()
+with open('query_track.txt', 'w') as f:
+    f.write('\n'.join(q_imgs))
 for i, img in enumerate(q_imgs):
     q_img_camID[img] = 'c901'  # camID for query starts from 901
     q_img_carID[img] = '%04d'%(i+1)
