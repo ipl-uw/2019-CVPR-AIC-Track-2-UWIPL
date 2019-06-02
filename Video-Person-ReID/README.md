@@ -15,7 +15,7 @@ First download the AIC19 dataset \[[link](https://www.aicitychallenge.org/)\], a
 
 1. Run `xml_reader_testdata.py` and `xml_reader_traindata.py` to convert images into desired file structure: `image_train_deepreid/carId/camId/imgId.jpg`.
 2. Run `create_feature_files.py` to convert the keypoints into desired file structure as images:  `keypoint_train_deepreid/carId/camId/imgId.txt`.
-3. Run `convert_metadata_imglistprob.py` to convert the metadata inference result of query (and test) tracks into `prob_v2m100_query.txt` and `imglist_v2m100_query.txt`. And then run `create_metadata_files.py` to convert the metadata into desired file structure as images:  `metadata_v2m100_query_deepreid/carId/camId/imgId.txt`. If using other metadata models, change `v2m100` to other names. Example txt output can be downloaded [here](https://drive.google.com/open?id=1X4geSMtsHCztwmhuUimjFjEZGUImsA7L).
+3. Run `convert_metadata_imglistprob.py` to convert the metadata inference result of query (and test) tracks into `prob_v2m100_query.txt` and `imglist_v2m100_query.txt`. And then run `create_metadata_files.py` to convert the metadata into desired file structure as images:  `metadata_v2m100_query_deepreid/carId/camId/imgId.txt`. If using other metadata models, change `v2m100` to other names. Example txt output from the provided metadata model \[[link](https://drive.google.com/file/d/1Ln-rK6k1vMjcC-0ySK9RMH6mLlXpdUsw/view?usp=sharing)\] can be downloaded [here](https://drive.google.com/open?id=1X4geSMtsHCztwmhuUimjFjEZGUImsA7L).
 
 
 ### Training
