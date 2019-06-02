@@ -57,3 +57,4 @@ For generating features for our AIC19 track 1 's testing \[[code](https://github
 python  Graph_ModelDataGen.py
 `
 <br />
+The pretrained model can be downloaded [here](http://). The model should be put under `log/`.
