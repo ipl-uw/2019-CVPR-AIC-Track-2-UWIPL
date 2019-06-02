@@ -15,7 +15,7 @@ First download the AIC19 dataset \[[link](https://www.aicitychallenge.org/)\], a
 
 1. Run `xml_reader_testdata.py` and `xml_reader_traindata.py` to convert images into desired file structure: `image_train_deepreid/carId/camId/imgId.jpg`.
 2. Run `create_feature_files.py` to convert the keypoints into desired file structure as images:  `keypoint_train_deepreid/carId/camId/imgId.txt`.
-3. Run `convert_metadata_imglistprob.py` to convert the metadata inference result of query (and test) tracks into `prob_v2m100_query.txt` and `imglist_v2m100_query.txt`. And then run `create_metadata_files.py` to convert the metadata into desired file structure as images:  `metadata_v2m100_query_deepreid/carId/camId/imgId.txt`. If using other metadata models, change `v2m100` to other names. Example txt files can be downloaded [here](https://drive.google.com/open?id=1X4geSMtsHCztwmhuUimjFjEZGUImsA7L).
+3. Run `convert_metadata_imglistprob.py` to convert the metadata inference result of query (and test) tracks into `prob_v2m100_query.txt` and `imglist_v2m100_query.txt`. And then run `create_metadata_files.py` to convert the metadata into desired file structure as images:  `metadata_v2m100_query_deepreid/carId/camId/imgId.txt`. If using other metadata models, change `v2m100` to other names. Example txt output can be downloaded [here](https://drive.google.com/open?id=1X4geSMtsHCztwmhuUimjFjEZGUImsA7L).
 
 ### Training
 
@@ -27,17 +27,16 @@ python  main_video_person_reid.py --train-batch 16 --workers 0 --seq-len 4 --arc
 <br />
 
 `arch` could be `resnet50ta_surface_nu` (Temporal Attention with keypoints feature, for AIC19 track 2) or `resnet50ta` (Temporal Attention, for AIC19 track 1). If using `resnet50ta`, do not use `--use-surface`.<br />
-`metadatamodel` is correspond to the folder name `metadata_metadatamodel_query_deepreid` created in previous step.
 
 ### Testing
 
 To test the model, please run
 <br />
 `
-python  main_video_person_reid.py --train-batch 16 --workers 0 --seq-len 4 --arch resnet50ta_surface_nu --width 224 --height 224 --dataset aictrack2 --use-surface --evaluate --pretrained-model log/checkpoint_ep300.pth.tar --save-dir log-test-m --gpu-devices 1 --re-ranking --metadata-model v2m100
+python  main_video_person_reid.py --train-batch 16 --workers 0 --seq-len 4 --arch resnet50ta_surface_nu --width 224 --height 224 --dataset aictrack2 --use-surface --evaluate --pretrained-model log/checkpoint_ep300.pth.tar --save-dir log-test --gpu-devices 0 --re-ranking --metadata-model v2m100
 `
 <br />
-Optionally, run on previously saved feature without redoing inference
+Optionally, start from previously saved feature without redoing inference
 <br />
 `
 python  main_video_person_reid.py --dataset aictrack2 --save-dir log --re-ranking --metadata-model v2m100 --load-feature --feature-dir feature_dir
@@ -45,7 +44,7 @@ python  main_video_person_reid.py --dataset aictrack2 --save-dir log --re-rankin
 <br />
 `feature_dir` can be point to previously saved feature directory, e.g. `log/feature_ep0300`.<br />
 
-The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE).
+The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE). Besides, the confusion matrix should be put under `metadata/`. Example confusion matrix can be downloaded [here](https://drive.google.com/open?id=178oG9f8H58YgVWsk_KaxpWf_i3dr2wER).
 
 
 ### AIC19 track 1
