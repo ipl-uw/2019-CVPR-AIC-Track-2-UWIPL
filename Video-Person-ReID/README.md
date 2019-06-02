@@ -48,9 +48,9 @@ python  main_video_person_reid.py --dataset aictrack2 --save-dir log --re-rankin
 The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE).
 
 
-### AIC track 1
+### AIC19 track 1
 
-For generating features for our AIC track 1 's testing \[[code](https://github.com/ipl-uw/2019-CVPR-AIC-Track-1-UWIPL)\], run
+For generating features for our AIC19 track 1 's testing \[[code](https://github.com/ipl-uw/2019-CVPR-AIC-Track-1-UWIPL)\], run
 <br />
 `
 python  Graph_ModelDataGen.py
