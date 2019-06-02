@@ -773,13 +773,11 @@ def test_feature(aggregate_writer):
     q_camids = np.load(osp.join(args.feature_dir, 'q_camids.npy'))
     g_camids = np.load(osp.join(args.feature_dir, 'g_camids.npy'))
     qf = np.load(osp.join(args.feature_dir, 'qf.npy'))
-    gf = np.load(osp.join(args.feature_dir, 'gf.npy'))   
-    if osp.isfile('./metadata/q_metadatas_%s.npy'%args.metadata_model) and osp.isfile('./metadata/g_metadatas_%s.npy'%args.metadata_model):
-        q_metadatas = np.load('./metadata/q_metadatas_%s.npy'%args.metadata_model)
-        g_metadatas = np.load('./metadata/g_metadatas_%s.npy'%args.metadata_model)
-    else:
-        q_metadatas = np.load(osp.join(args.feature_dir, 'q_metadatas_%s.npy'%args.metadata_model))
-        g_metadatas = np.load(osp.join(args.feature_dir, 'g_metadatas_%s.npy'%args.metadata_model))
+    gf = np.load(osp.join(args.feature_dir, 'gf.npy'))
+    #q_metadatas = np.load('./metadata/q_metadatas_%s.npy'%args.metadata_model)
+    #g_metadatas = np.load('./metadata/g_metadatas_%s.npy'%args.metadata_model)
+    q_metadatas = np.load(osp.join(args.feature_dir, 'q_metadatas_%s.npy'%args.metadata_model))
+    g_metadatas = np.load(osp.join(args.feature_dir, 'g_metadatas_%s.npy'%args.metadata_model))
     print('q_pids.shape = ' + str(q_pids.shape))
     print('g_pids.shape = ' + str(g_pids.shape))
     print('q_camids.shape = ' + str(q_camids.shape))
@@ -797,13 +795,8 @@ def evaluate_feature(qf, gf, q_metadatas, g_metadatas, q_pids, g_pids, q_camids,
     if args.metadata_model:
         #confusion_mats_obj = np.load('./metadata/cm_%s.npy'%args.metadata_model, encoding='latin1')
         confusion_file = './metadata/cm_%s_normalized.npy'%args.metadata_model
-        if osp.isfile(confusion_file):
-            confusion_mats_obj = np.load(confusion_file, encoding='latin1')
-        else:
-            print('confusion matrix file not found: %s'%confusion_file)
-            print('use identity matrix as confusion matrix')
-            confusion_mats_obj = np.load('./metadata/cm_%seye.npy'%args.metadata_model[:2], encoding='latin1')
-        if args.metadata_model[:2] == 'v1':
+        confusion_mats_obj = np.load(confusion_file, encoding='latin1')
+        if args.metadata_model[:2] == 'v1': 
             default_metadata_prob_ranges = [(0,6), (6,18), (18,26)]
             confusion_mats = dict()
             for i, prob_range in enumerate(default_metadata_prob_ranges):
@@ -887,7 +880,7 @@ def evaluate_feature(qf, gf, q_metadatas, g_metadatas, q_pids, g_pids, q_camids,
     #distmat += 1000 * compute_metadata_distance_hard(qf, gf, metadata_prob_ranges)
     ##########################################
 
-
+    print('Before re-ranking')
     print("Computing CMC, mAP and matches_imgids - top 100")
     distmat = original_dist[0:query_num, query_num:all_num]
     cmc, mAP, matches_imgids, matches_imgids_FP, matches_gt_pred = evaluate_imgids(distmat, q_pids, g_pids, q_camids, g_camids, q_imgids, g_imgids, 50, 100)
@@ -942,23 +935,21 @@ def evaluate_feature(qf, gf, q_metadatas, g_metadatas, q_pids, g_pids, q_camids,
             for k2 in range(4,k1+1,1):
                 #for lambda_value in np.arange(0.2,1.1,0.1):
                 for lambda_value in np.arange(0.5,0.6,0.1):
-                    print('now try different k1, k2 and lambda_value')
-                    print('k1 = ', k1)
-                    print('k2 = ', k2)
-                    print('lambda_value = ', lambda_value)
                     #r_metadata = 10.0
                     #r_metadatas = [0.001, 0.002, 0.005, 0.01, 0.02]
-                    #for r_metadata in np.arange(0.5, 20, 0.5):
-                    for r_metadata in np.arange(0.01, 20, 0.01):
+                    #for r_metadata in np.arange(20, 21, 1):
+                    for r_metadata in np.arange(0.2, 0.21, 0.01):
                     #for r_metadata in np.arange(0.01, 0.51, 0.01):
                     #for r_metadata in r_metadatas:
+                        print('now try different k1, k2 and lambda_value')
+                        print('k1 = ', k1)
+                        print('k2 = ', k2)
+                        print('lambda_value = ', lambda_value)
                         print('r_metadata = ', r_metadata)
 
                         #final_dist = re_ranking_metadata_soft(qf, gf, q_metadatas, g_metadatas, metadata_prob_ranges, k1, k2, lambda_value)
                         #final_dist = re_ranking_metadata_soft_v2(qf, gf, q_metadatas, g_metadatas, confusion_mats, metadata_prob_ranges, k1, k2, lambda_value)
                         final_dist = re_ranking_metadata_soft_v3(original_dist, metadata_dist, query_num, all_num, r_metadata, k1, k2, lambda_value)
-                        
-                        
                         print('after re-ranking, the final_dist.shape is: ', final_dist.shape)
                         # ping evaluate after re-ranking
                         #print("Computing CMC and mAP after re-ranking")
