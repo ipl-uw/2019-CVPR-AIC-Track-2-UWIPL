@@ -3,7 +3,7 @@ from os.path import join, split, isfile, isdir
 
 
 conversions = [
-    ('./track2-gallery-query-metadata-v2m100/test-prob-100.log',
+    ('./track2-gallery-query-metadata-v2m100/test-prob-v2m100.log',
      './track2-gallery-query-metadata-v2m100/prob_v2m100.txt',
      './track2-gallery-query-metadata-v2m100/imglist_v2m100.txt'),
 ]
