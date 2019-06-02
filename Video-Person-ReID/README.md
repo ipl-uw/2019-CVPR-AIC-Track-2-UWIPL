@@ -61,5 +61,6 @@ The pretrained model can be downloaded [here](https://drive.google.com/file/d/1C
 
 ### Reference
 
-The code is modified from Jiyang Gao's  [Video-Person-ReID](https://github.com/jiyanggao/Video-Person-ReID).
-We also adopt the visualization code from KaiyangZhou's [deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid), and the re-ranking code from zhunzhong07's [person-re-ranking](https://github.com/zhunzhong07/person-re-ranking).
+The code is modified from Jiyang Gao's [Video-Person-ReID](https://github.com/jiyanggao/Video-Person-ReID)<br/>.
+The visualization code is adopted from KaiyangZhou's [deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid).<br/>
+The re-ranking code is modified based on zhunzhong07's [person-re-ranking](https://github.com/zhunzhong07/person-re-ranking).
