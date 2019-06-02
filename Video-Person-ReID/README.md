@@ -17,6 +17,7 @@ First download the AIC19 dataset \[[link](https://www.aicitychallenge.org/)\], a
 2. Run `create_feature_files.py` to convert the keypoints into desired file structure as images:  `keypoint_train_deepreid/carId/camId/imgId.txt`.
 3. Run `convert_metadata_imglistprob.py` to convert the metadata inference result of query (and test) tracks into `prob_v2m100_query.txt` and `imglist_v2m100_query.txt`. And then run `create_metadata_files.py` to convert the metadata into desired file structure as images:  `metadata_v2m100_query_deepreid/carId/camId/imgId.txt`. If using other metadata models, change `v2m100` to other names. Example txt output can be downloaded [here](https://drive.google.com/open?id=1X4geSMtsHCztwmhuUimjFjEZGUImsA7L).
 
+
 ### Training
 
 To train the model, please run
@@ -44,7 +45,8 @@ python  main_video_person_reid.py --dataset aictrack2 --save-dir log --re-rankin
 <br />
 `feature_dir` can be point to previously saved feature directory, e.g. `log/feature_ep0300`.<br />
 
-The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE). Besides, the confusion matrix should be put under `metadata/`. Example confusion matrix can be downloaded [here](https://drive.google.com/open?id=178oG9f8H58YgVWsk_KaxpWf_i3dr2wER).
+The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE).<br/>
+Besides, the confusion matrix of metadata model need to be put under `metadata/`. Example confusion matrix can be downloaded [here](https://drive.google.com/open?id=178oG9f8H58YgVWsk_KaxpWf_i3dr2wER).
 
 
 ### AIC19 track 1
