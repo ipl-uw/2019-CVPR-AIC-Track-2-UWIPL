@@ -8,7 +8,7 @@ This code assumes you have the following packages installed.
 
 ## Our pre-trained model
 
-Download the pre-trained model [here](https://drive.google.com/file/d/1Ln-rK6k1vMjcC-0ySK9RMH6mLlXpdUsw/view?usp=sharing).
+Download the pre-trained model [here](https://drive.google.com/file/d/10Uy37bsTSJWc7t9_Ug2lBU8SSKeCstR9/view?usp=sharing).
 - The model is pretrained on CompCar dataset [link](http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html).
 - Then some images in track2 training set are used for further training. 
 
