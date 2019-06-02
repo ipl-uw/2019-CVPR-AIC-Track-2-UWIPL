@@ -58,3 +58,8 @@ python  Graph_ModelDataGen.py
 `
 <br />
 The pretrained model can be downloaded [here](https://drive.google.com/file/d/1C-uE8nPA3Rtu8tkHptRS8J87sayrB7Nj/view?usp=sharing). The model should be put under `log/`.
+
+### Reference
+
+The code is modified from Jiyang Gao's Video-Person-ReID \[[code](https://github.com/jiyanggao/Video-Person-ReID)\].
+We also adopt the visualization code from KaiyangZhou's [deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid), and the re-ranking code from zhunzhong07's [person-re-ranking](https://github.com/zhunzhong07/person-re-ranking).
