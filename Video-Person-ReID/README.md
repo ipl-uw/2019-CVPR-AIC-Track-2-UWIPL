@@ -45,7 +45,7 @@ python  main_video_person_reid.py --dataset aictrack2 --save-dir log --re-rankin
 <br />
 `feature_dir` can be point to previously saved feature directory, e.g. `log/feature_ep0300`.<br />
 
-The pre-trained model can be download at [here](https://github.com/ipl-uw).
+The pre-trained model can be download at [here](https://drive.google.com/open?id=1jjwQhk8i4X12_DjCz9LlgrvL-9uKa2mE).
 
 
 ### AIC track 1
