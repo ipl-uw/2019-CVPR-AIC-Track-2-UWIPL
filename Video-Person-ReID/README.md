@@ -57,7 +57,10 @@ For generating features for our AIC19 track 1 's testing \[[code](https://github
 python  Graph_ModelDataGen.py
 `
 <br />
-The pretrained model can be downloaded [here](https://drive.google.com/file/d/1C-uE8nPA3Rtu8tkHptRS8J87sayrB7Nj/view?usp=sharing). The model should be put under `log/`.
+The pretrained model can be downloaded [here](https://drive.google.com/file/d/1C-uE8nPA3Rtu8tkHptRS8J87sayrB7Nj/view?usp=sharing). The model should be put under `log/`.<br/>
+Besides, the data should be processed in a different manner:<br/>
+Create video2img folder in the downloaded project (i.e., Video-Person-ReID/video2img/).
+Put and run `python crop_img.py` in the same folder in the downloaded dataset (i.e., aic19-track1-mtmc/test). You need to creat a folder track1_test_img in the same path (i.e., aic19-track1-mtmc/test/track1_test_img). After that, create a folder track1_sct_img_test_big and run `python crop_img_big.py`. Then, create a folder log in the dowanloaded project (i.e., Video-Person-ReID/log) and put the downloaded model file of track1 ReID in this folder. Finally, run `python Graph_ModelDataGen.py` to obtain the feature files (q_camids3_no_nms_big0510.npy, qf3_no_nms_big0510.npy and q_pids3_no_nms_big0510.npy).<br />
 
 ### Reference
 
