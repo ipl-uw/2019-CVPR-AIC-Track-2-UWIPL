@@ -17,7 +17,7 @@ from bases import BaseVideoDataset
 
 class AICityTrack2(BaseVideoDataset):
 
-    def __init__(self, root='/home/ping/', min_seq_len=0, verbose=True, **kwargs):
+    def __init__(self, root, min_seq_len=0, verbose=True, **kwargs):
         self.dataset_dir = root
         self.split_query_json_path = osp.join(self.dataset_dir, 'split_query.json')
         self.min_seq_len = min_seq_len
