@@ -30,7 +30,7 @@ from reidtools import visualize_ranked_results  # TH
 
 def testseq(dataset_name, use_gpu):
     
-    dataset_root = './video2img/track1_test_img/'
+    dataset_root = './video2img/track1_sct_img_test_big/'
     dataset = Graph_data_manager.AICityTrack2(root=dataset_root)
 
 
