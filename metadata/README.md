@@ -28,11 +28,10 @@ python multi_label_classifier.py --dir "./YOUR_DIRPATH_OF_data.txt_and_label.txt
 
 ## Testing
 
-To test the model, make sure you have the image id and paths under ./your_model_name/Data/Test/data.txt. Then run, 
+To test the model, make sure you have the image id and paths under ./your_model_name/Data/Test/data.txt. To be simple, use `testdata.txt`.Then run, 
 
 python multi_label_classifier.py --dir "./YOUR_DIRPATH_OF_data.txt_and_label.txt/" --mode "Test" --model "LightenB" --name "YOURMODELNAME"  --checkpoint_name "/path_to_model.pth"
 
 
-The probabilities of each label will be saved in `test.log`.
-
+The probabilities of each label will be saved in `test.log`. Run `reformat-log.py` to reformat the log file for reranking.
 
