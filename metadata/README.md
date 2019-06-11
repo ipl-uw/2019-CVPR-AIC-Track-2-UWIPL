@@ -21,7 +21,7 @@ Download the pre-trained model [here](https://drive.google.com/file/d/119GdCtKDk
 - We cleaned up CompCar dataset by only keeping the brands exist in AIC dataset (based on country/type/year/version of the vehicle models) and correcting wrong labels.
 - The training set could be downloaded at [here](https://drive.google.com/file/d/1dbcjbdPBC19dCzq-v8TE-z1OHI4nLBFg/view?usp=sharing).
 - Some images in track2 training set and traffic video from surveillance camera are used for further training. For privacy concerns, we are not allowed to release the source videos. Please follow [their](http://www.uwstarlab.org/) future work on the dataset.
-- Once you run the testing code, you will obtain the probabilities of the metadata. To be simple and consistent with our Reid code, the ourput could be downloaded [here](https://drive.google.com/file/d/1korVAg0W_VKNYKiwc3cYwvmC6pDhiuxs/view?usp=sharing)
+- Once you run the testing code, you will obtain the probabilities of the metadata. To be simple and consistent with our Reid code, the output could be downloaded [here](https://drive.google.com/file/d/1korVAg0W_VKNYKiwc3cYwvmC6pDhiuxs/view?usp=sharing)
 
 ## Training
 
