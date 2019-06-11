@@ -5,6 +5,14 @@ The metadata classifier code is based on \[[code](https://github.com/pangwong/py
 This code assumes you have the following packages installed.
 - Python 3.6
 - Pytorch 0.4.0
+- Torchvision 0.2.1
+- Numpy 1.16.2
+- PIL 5.1.0
+
+Running system:
+- Linux Ubuntu 18.04
+- CUDA 9.0
+- 2 NVIDIA Titan Xp GPU
 
 ## Our pre-trained model
 
