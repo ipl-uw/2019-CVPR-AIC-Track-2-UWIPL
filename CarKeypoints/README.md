@@ -41,4 +41,4 @@ To run inference on multiple images, put image paths in a text file (e.g. `fullp
 inference-imageset.lua
 ```
 
-The result will be saved in `keypoint-train.txt`. Example results can be downloaded [here](https://drive.google.com/open?id=1PNzTWmSBE85m4UazAMdDFgB6PPaoADvQ).
+The result will be saved in `keypoint-train.txt`. Example results can be downloaded [here](https://drive.google.com/open?id=1m96n_1gsHy3iI9ruRGDGqaVXqjJgVcKf).
